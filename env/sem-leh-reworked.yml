@@ -1,0 +1,15 @@
+name: sem-leh2
+channels:
+  - conda-forge
+  - pytorch
+dependencies:
+  - click
+  - pip
+  - python=3.9
+  - pytorch
+  - pytorch-cuda=12.4
+  - spacy
+  - torchaudio
+  - torchvision
+  - pip:
+      - git+https://github.com/philheller/transformers.git
