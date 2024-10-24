@@ -1,6 +1,6 @@
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from transformers.generation.utils import GenerateDecoderOnlyOutput
-from utils import report_output
+from semantic_decoding.tests.continued_decoding.utils import report_output
 import torch
 
 # read access token from environment variable

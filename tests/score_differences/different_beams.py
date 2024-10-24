@@ -4,12 +4,10 @@ import torch
 import string
 import json
 from tqdm import tqdm
-from utils import compare_top_k
+from semantic_decoding.tests.score_differences.utils import compare_top_k
 from transformers.generation.utils import GenerationConfig
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import pickle
-
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../generators')))
 
 # read access token from environment variable
 import os

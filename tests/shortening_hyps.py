@@ -1,12 +1,7 @@
-from transformers.generation.utils import GenerateBeamDecoderOnlyOutput
 import os
-import sys
 import torch
-from score_differences.utils import report
-
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../generators')))
-
-from syntactic import SyntacticGenerator
+from semantic_decoding.tests.score_differences.utils import report
+from semantic_decoding.generators.syntactic import SyntacticGenerator
 
 # read access token from environment variable
 import os

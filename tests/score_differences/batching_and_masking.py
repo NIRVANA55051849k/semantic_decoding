@@ -1,11 +1,7 @@
 import os
-import sys
 import torch
-from utils import report, compare_top_k
-
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../generators')))
-
-from syntactic import SyntacticGenerator
+from semantic_decoding.tests.score_differences.utils import report, compare_top_k
+from semantic_decoding.generators.syntactic import SyntacticGenerator
 
 # read access token from environment variable
 import os
