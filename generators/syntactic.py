@@ -121,7 +121,7 @@ class SyntacticGenerator:
         print(f"Eval mode: {not model.training}")
         return model
 
-    def _load_tokenizer(self, model_name: str, access_token: Optional[str]) -> (PreTrainedTokenizer | PreTrainedTokenizerFast):
+    def _load_tokenizer(self, model_name: str, access_token: Optional[str]) -> Union[PreTrainedTokenizer, PreTrainedTokenizerFast]:
         """
         Load a pre-trained tokenizer from Hugging Face model hub.
         
