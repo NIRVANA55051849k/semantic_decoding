@@ -115,6 +115,7 @@ class SyntacticGenerator:
         )
         model.eval() # Though this is default, but just to be sure
         print(f"Model: {model_name}")
+        print( f"Devices ({torch.cuda.device_count()}): {[torch.cuda.get_device_name(i) for i in range(torch.cuda.device_count())]}")
         print(f"Model on device: {model.device}")
         print(f"Model device map: {model.hf_device_map}")
         print(f"Using precision: {next(model.parameters()).dtype}")

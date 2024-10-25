@@ -38,6 +38,7 @@ class Generator:
         self.device = device
         first_device = next(iter(self.syntactic_generator.model.hf_device_map.values()))
         self.first_device = torch.device(f'cuda:{first_device}')
+        # for deterministic results
         os.environ['CUBLAS_WORKSPACE_CONFIG'] = ':4096:8'
         torch.use_deterministic_algorithms(True)
     
